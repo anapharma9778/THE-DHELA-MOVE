@@ -1,0 +1,258 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff0303;
+    color: black;
+}
+
+/* Carousel styles */
+.carousel-media {
+    height: 500px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image/video covers the container */
+}
+
+/* Movie styles */
+.featured-movie {
+    margin-bottom: 40px;
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+}
+
+.movie-info a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.movie-info img {
+    max-width: 200px;
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Adding transition effect */
+}
+
+.movie-title {
+    color: black;
+    text-decoration: none;
+}
+
+.description {
+    flex-grow: 1;
+}
+
+.description h3 {
+    margin-top: 0;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.movie img {
+    max-width: 150px;
+    transition: transform 0.3s ease; /* Adding transition effect */
+}
+
+.movie_dj img {
+    transition: transform 0.2s;
+    margin-right: 10px;
+}
+
+.movie_dj img:hover {
+    transform: scale(1.2);
+}
+
+
+.movie-list .movie h3 {
+    color: black;
+    text-decoration: none;
+}
+
+.movie a {
+    text-decoration: none;
+}
+
+.movie a:hover .movie-title {
+    text-decoration: underline;
+}
+
+/* Highlight effect for images */
+.highlight-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Adding transition effect */
+}
+
+.highlight-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Adding transition effect */
+}
+
+.highlight-box:hover::before {
+    border-color: #333; /* Border color on hover */
+}
+
+.highlight-box img {
+    transition: transform 0.3s ease; /* Adding transition effect */
+}
+
+.highlight-box:hover img {
+    transform: scale(1.1); /* Image scale on hover */
+}
+
+/* Focus state for accessibility */
+.highlight-box:focus::before,
+.highlight-box:focus img {
+    outline: none;
+}
+
+.highlight-box:focus::before {
+    border-color: #333; /* Border color on focus */
+}
+
+.highlight-box:focus img {
+    transform: scale(1.1); /* Image scale on focus */
+}
+
+/* Text color */
+.black-text {
+    color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-collapse, .navbar-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-nav, .navbar-form {
+        margin-top: 10px;
+    }
+
+    .navbar-form input[type="search"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .navbar-form button[type="submit"] {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .movie-info img {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .movie-list .movie {
+        width: 100%;
+    }
+
+    .movie-list .movie img {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+/* Additional styles */
+.button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #666;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.carousel-media {
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the images cover the container without distorting */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (Chrome, Safari) specific image quality enhancement */
+    image-rendering: crisp-edges; /* Enhance image quality */
+    image-rendering: high-quality; /* General image quality enhancement */
+}
